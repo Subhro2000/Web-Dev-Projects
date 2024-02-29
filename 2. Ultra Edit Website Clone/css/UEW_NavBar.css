@@ -1,0 +1,26 @@
+nav{
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo img{
+    width: 150px;
+}
+
+.listItems ul{
+    display: flex;
+    column-gap: 20px;
+}
+
+.listItems ul li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.listItems ul li span{
+    padding: 0px 5px;
+}

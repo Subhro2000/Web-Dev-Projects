@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&family=Roboto&display=swap');
+
+
+:root{
+    --purple500 : #281154;
+    --purple300 : #270082;
+    --purple600 : #1b0058;
+    --red600 : #dc0000;
+    --body : #f9f6ff;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    /* default 100% = 16px = 1rem
+    now we set 62.5% = 10px = 1rem */
+    
+    font-size: 62.5%;
+}
+
+body{
+    line-height: 1.4;
+    font-weight: 400;
+    font-family: "Roboto", sans-serif;
+    scroll-behavior: smooth;
+    font-size: 1.6rem;
+}
+
+section{
+    scroll-margin: 5rem;
+}
+
+button{
+    padding: 1.5rem 1.5rem;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    transition: 0.2s ease-in-out;
+}
+
+button:hover{
+    transition: 0.2s ease-in-out;
+    opacity: 0.7;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+/* Navigation */
+
+header{
+    background-color: var(--purple300);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0.5rem 0.5rem 1.5rem black;
+}
+
+.nav_section{
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 0;
+   
+}
+
+.logo{
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.list_items ul{
+    display: flex;
+    gap: 2.5rem;
+    border-bottom: #fff 2px transparent;
+}
+
+.list_items ul li{
+    list-style: none;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.8s ease-in;
+}
+
+.list_items ul li:hover{
+    transition: 0.8s ease-out;
+    text-decoration: underline;
+}
+
+/* Hero Section */
+
+.hero_section{
+    background-image: url(images/hero_image.png);
+    height: 100vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: white;
+}
+
+.container{
+    width: 70vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    text-align: center;
+
+}
+
+.hero_section h1{
+    font-size: 6.4rem;
+}
+
+.hero_section h3{
+    font-size: 2.8rem;
+    font-weight: 200;
+}
+
+/* Music Section */
+
+.music_section{
+    background-color: var(--purple500);
+    color: white;
+    padding: 4rem 0;
+    display: grid;
+    place-items: center;
+    /* text-align: center; */
+    /* height: 100vh; */
+}
+
+.icon{
+    display: flex;
+    gap: 2rem;
+    font-size: 3.2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+.trial_btn{
+    align-self: center;
+    background-color: var(--red600);
+}
+
+
+/* If we set music section height to 100vh
+then we don't have to do this */
+
+.ipad_iphone_img{
+    position: relative;
+    top: 40rem;
+    margin-top: -40rem;
+}
+
+.ipad_iphone_img img{
+    max-width: 100%;
+}
+
+/* About Music Section */
+
+.about_music_section{
+    margin-top: 40rem;
+    margin-bottom: 5rem;
+}
+
+.about_music_section p{
+    font-size: 1.5rem;
+    font-weight: 10rem;
+}
+
+.secondary_btn{
+    align-self: center;
+    background-color: var(--purple600);
+}
+
+.mac_img img{
+    max-width: 100%;
+}
+
+/* Video Section */
+
+.video_section{
+    background-image: url(images/video.png);
+    height: 100vh;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    color: white;
+    margin-bottom: 5rem;
+}
+
+.video_section .container{
+    margin-top: -30rem;
+}
+
+/* Gift Card Section */
+
+.gift_section .container{
+    flex-direction: row;
+    gap: 10rem;
+    margin: 7rem auto;
+    
+}
+
+.giftcard_content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    gap: 3rem;
+}
+
+.giftcard_content p{
+    font-size: small;
+}
+
+/* Footer */
+
+.upper_footer .container{
+    flex-direction: row;
+    padding: 5rem;
+    justify-content: space-around;
+    text-align: justify;
+}
+
+.upper_footer{
+    background-color: var(--purple600);
+    color: white;
+}
+
+.footer_items ul{
+    margin-top: 1.5rem;
+    list-style: none;
+}
+
+.lower_footer{
+    background-color: var(--purple300);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .ipad_iphone_img{
+        top: 25rem;
+        margin-top: -25rem;
+    }
+
+    .about_music_section{
+        margin-top: 25rem;
+    }
+
+    .giftcard_img img{
+        width: 40rem;
+    }
+
+    .gift_section .container{
+        flex-direction: column;
+        gap: 5rem;
+        margin: 7rem auto;
+        
+    }
+
+    .reedem_btn{
+        align-self: center;
+    }
+    
+}
+
+
+@media screen and (max-width: 768px) {
+
+    html{
+        /* default 100% = 16px = 1rem
+        now we set 40% = 6.4px = 1rem */
+        
+        font-size: 50%;
+    }
+
+    header{
+        background-color: #dc0000;
+    }
+
+    .nav_section ul{
+        display: none;
+    }
+
+    .menu_bar{
+        display: block;
+        font-size: 2.4rem;
+        color: white;
+    }
+
+
+    .upper_footer .container{
+        min-width: 100vw;
+        flex-wrap: wrap;
+        margin: 0;
+        justify-content: flex-start;
+        row-gap: 2.8rem;
+    }
+
+    .upper_footer .footer_items{
+        min-width: 25rem;
+        font-size: 2rem;
+    }
+
+    
+
+}
+
+@media screen and (min-width: 769px) {
+    .menu_bar{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .ipad_iphone_img{
+        top: 15rem;
+        margin-top: -15rem;
+    }
+
+    .about_music_section{
+        margin-top: 15rem;
+    }
+
+    .giftcard_img img{
+        width: 30rem;
+    }
+    
+}
+
+
+
+
